@@ -44,7 +44,7 @@ console.log(isValid(result)); // false
 Whenever a field message value be empty string ('') means no validation error.
 In the example above we put fields in array and all the fields message shoul be be emptry string '' to isValid() function returns true otherwise it returns false.
 ### Single field example
-Here is example of single object field instead of array of objects.
+Here is an example of single object field instead of array of objects.
 ```sh
 let {validoz, isValid} = require('validoz');
 let field = {
@@ -62,9 +62,9 @@ Here is the types of field.
 | name | Description |
 | ------ | ------ |
 | `text` | Normal string. |
-| `fullname` | string should contain at least 2 words with 3 characters for each of the words and separated by space. It can contain more than one word.|
+| `fullname` | String should contain at least 2 words with 3 characters for each of the words and separated by space. It can contain more than one word.|
 | `username` | Like Instagram username. |
-| `word` | alphabet characters |
+| `word` | Alphabet characters |
 | `number` | An integer number |
 | `date` | Example `21/03/2020` string |
 | `time` | Example `05:12` string|
@@ -80,7 +80,7 @@ Here is the types of field.
 | `min` and `max` | Minumum and Maximum of type number. Each of them can be passed alone. |
 | `minDigits` and `maxDigits` | Minumum and Maximum digits of type number. Each of them can be passed alone. |
 | `minLength` and `maxLength` | Minimum and Maximum length of the string types. |
-| `dateFormat` | String values of `'mm/dd/yyyy'`, `'mm-dd-yyyy'`, `'dd/mm/yyyy'`, `'dd-mm-yyyy'`, `'yyyy/mm/dd'` and `'yyyy-mm-dd'` |
+| `dateFormat` | String values of `mm/dd/yyyy`, `mm-dd-yyyy`, `dd/mm/yyyy`, `dd-mm-yyyy`, `yyyy/mm/dd` and `yyyy-mm-dd` |
 | `equal` | A field value and equal value to be equal |
 
 
