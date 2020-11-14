@@ -80,7 +80,6 @@ Here is the types of field.
 | `min` and `max` | Minumum and Maximum of type number. Each of them can be passed alone. |
 | `minDigits` and `maxDigits` | Minumum and Maximum digits of type number. Each of them can be passed alone. |
 | `minLength` and `maxLength` | Minimum and Maximum length of the string types. |
-| `shouldBe` | A field value and shouldBe value to be equal |
 | `dateFormat` | String values of `'mm/dd/yyyy'`, `'mm-dd-yyyy'`, `'dd/mm/yyyy'`, `'dd-mm-yyyy'`, `'yyyy/mm/dd'` and `'yyyy-mm-dd'` |
 | `equal` | A field value and equal value to be equal |
 
