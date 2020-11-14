@@ -76,13 +76,13 @@ Here is the types of field.
 | `name` | Field name |
 | `value` | Field value |
 | `type` | Field type |
-| `required` | `Boolean`. If field required |
+| `required` | `Boolean`. default: `true` |
 | `min` and `max` | Minumum and Maximum of type number. Each of them can be passed alone. |
 | `minDigits` and `maxDigits` | Minumum and Maximum digits of type number. Each of them can be passed alone. |
 | `minLength` and `maxLength` | Minimum and Maximum length of the string types. |
 | `shouldBe` | A field value and shouldBe value to be equal |
 | `dateFormat` | String values of `'mm/dd/yyyy'`, `'mm-dd-yyyy'`, `'dd/mm/yyyy'`, `'dd-mm-yyyy'`, `'yyyy/mm/dd'` and `'yyyy-mm-dd'` |
-| `shouldBe` | A field value and shouldBe value to be equal |
+| `equal` | A field value and equal value to be equal |
 
 
 
@@ -116,29 +116,3 @@ License
 
 MIT
 
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
