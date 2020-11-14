@@ -7,7 +7,7 @@ Validoz is both Client side and Server side form field validator.
 ```sh
 $ npm install validoz
 ```
-
+Or - [Download](https://github.com/KamyarLajani/validoz/archive/main.zip)
 ### Sample code
 
 ```sh
@@ -64,10 +64,10 @@ Here is the types of field.
 | `text` | Normal string. |
 | `fullname` | String should contain at least 2 words with 3 characters for each of the words and separated by space. It can contain more than one word.|
 | `username` | Like Instagram username. |
-| `word` | Alphabet characters |
+| `word` | Alphabet characters. |
 | `number` | An integer number |
-| `date` | Example `21/03/2020` string |
-| `time` | Example `05:12` string|
+| `date` | Example `21/03/2020` string. |
+| `time` | Example `05:12` string. |
 
 ### Options
 
@@ -81,7 +81,7 @@ Here is the types of field.
 | `minDigits` and `maxDigits` | Minumum and Maximum digits of type number. Each of them can be passed alone. |
 | `minLength` and `maxLength` | Minimum and Maximum length of the string types. |
 | `dateFormat` | String values of `mm/dd/yyyy`, `mm-dd-yyyy`, `dd/mm/yyyy`, `dd-mm-yyyy`, `yyyy/mm/dd` and `yyyy-mm-dd` |
-| `equal` | A field value and equal value to be equal |
+| `equal` | A field value and equal value to be equal. |
 
 
 
@@ -103,7 +103,7 @@ console.log(isValid(result)); // true
 ```
 
 ### Examples demo
-- [Demo 1](d)
+- [Demo 1](https://github.com/KamyarLajani/validoz/archive/)
 - [Demo 2]()
 
 
