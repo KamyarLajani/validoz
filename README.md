@@ -8,6 +8,8 @@ Validoz is both Client side and Server side form field validator.
 $ npm install validoz
 ```
 ##### Or [Download](https://github.com/KamyarLajani/validoz/archive/main.zip)
+
+
 ### Sample code
 
 ```sh
