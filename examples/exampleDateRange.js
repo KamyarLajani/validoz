@@ -1,4 +1,4 @@
-let {validoz, isValid} = require('./validoz');
+let {validoz, isValid} = require('../validoz');
 
 let field = {
     name: "Date",
