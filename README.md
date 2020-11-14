@@ -1,6 +1,6 @@
 # Validoz
 
-Validoz is both Client and Server side form field validator.
+Validoz is both Client side and Server side form field validator.
 
 ### Installation
 
