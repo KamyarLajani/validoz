@@ -9,6 +9,6 @@ let field = {
     endDate: '24/05/2020',
 };
 
-let result = validoz(field); // { field: 'Date', message: '' }
-console.log(result); 
+let result = validoz(field);
+console.log(result); // { field: 'Date', message: '' }
 console.log(isValid(result)); // true
