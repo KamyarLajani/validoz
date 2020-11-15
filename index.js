@@ -303,7 +303,7 @@ const validate = (field)=>{
     if(field.type === 'password'){
         const passwordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/;
         if(!field.value.match(passwordFormat)){
-            error.push(`${field.name} must contain at least one numberic, one upper case, one lower case characters and the length at least 6 characters`);
+            error.push(`${field.name} must contain at least one numberic, one upper case and one lower case characters and the length at least 6 characters`);
         }
     }
     if(field.equal !== undefined){

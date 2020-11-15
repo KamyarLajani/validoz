@@ -161,7 +161,7 @@ Returns:
   { field: 'Best friend', message: 'Best friend value is wrong' },
   {
     field: 'Password',
-    message: 'Password must contain at least one numberic, one upper case, one lower case characters and the length at least 6 characters'
+    message: 'Password must contain at least one numberic, one upper case and one lower case characters and the length at least 6 characters'
   }
 ]
 */
