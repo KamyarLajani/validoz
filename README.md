@@ -46,7 +46,7 @@ Whenever a field message value be empty string ('') means no validation error.
 In the example above we put fields in array and all the fields message shoul be be emptry string '' to isValid() function returns true otherwise it returns false.
 ### Single field example
 Here is an example of single object field instead of array of objects.
-```sh
+```js
 let {validoz, isValid, isValidByName} = require('validoz');
 
 let field = {
