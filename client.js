@@ -300,6 +300,12 @@ const validate = (field)=>{
             error.push(`${field.name} is invalid`);
         }
     }
+    if(field.type === 'password'){
+        const passwordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/;
+        if(!field.value.match(passwordFormat)){
+            error.push(`${field.name} must contain at least one numberic, one upper case and one lower case characters and the length at least 6 characters`);
+        }
+    }
     if(field.equal !== undefined){
         if(field.value !== field.equal){
             error.push(`${field.name} value is wrong`);
@@ -335,19 +341,18 @@ const isValid = (fields) => {
 }
 const isValidByName = (fields, name) => {
     // is fields multiple?
+    let isValid = true;
     if(Array.isArray(fields)){
         for(let field of fields) {
-            if(field.message === '' && field.name === name){
-                return true;
+            if(field.message !== '' && field.field === name){
+                isValid = false;
             }
-            return false;
         }
     }
     else if(typeof fields === 'object' && fields !== null){
-        if(field.message === '' && field.name === name){
-            return true;
+        if(fields.message !== '' && fields.field === name){
+            isValid = false;
         }
-        return false;
     }
     return isValid;
 }
