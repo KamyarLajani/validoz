@@ -305,6 +305,11 @@ const validate = (field)=>{
             error.push(`${field.name} value is wrong`);
         }
     }
+    if(field.notEqual !== undefined){
+        if(field.value === field.notEqual){
+            error.push(`${field.name} value is wrong`);
+        }
+    }
     if(error[0] === undefined){
         return {field: field.name, message: ''};
     }
@@ -325,6 +330,24 @@ const isValid = (fields) => {
         if(fields.message !== ''){
             isValid = false;
         }
+    }
+    return isValid;
+}
+const isValidByName = (fields, name) => {
+    // is fields multiple?
+    if(Array.isArray(fields)){
+        for(let field of fields) {
+            if(field.message === '' && field.name === name){
+                return true;
+            }
+            return false;
+        }
+    }
+    else if(typeof fields === 'object' && fields !== null){
+        if(field.message === '' && field.name === name){
+            return true;
+        }
+        return false;
     }
     return isValid;
 }

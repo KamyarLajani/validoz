@@ -9,7 +9,6 @@ $ npm install validoz
 ```
 ##### Or [Download](https://github.com/KamyarLajani/validoz/archive/main.zip)
 
-
 ### Sample code
 
 ```sh
@@ -48,15 +47,18 @@ In the example above we put fields in array and all the fields message shoul be 
 ### Single field example
 Here is an example of single object field instead of array of objects.
 ```sh
-let {validoz, isValid} = require('validoz');
+let {validoz, isValid, isValidByName} = require('validoz');
+
 let field = {
     name: "Full name",
     type: "fullname",
     value: 'John doe'
 };
+
 let result = validoz(field);
 console.log(result); // { field: 'Full name', message: '' }
-console.log(isValid(result)); // true
+isValid(result); // true
+isValidByName(result, 'Full name'); // true
 ```
 ### Types
 Here is the types of field.
@@ -64,6 +66,7 @@ Here is the types of field.
 | name | Description |
 | ------ | ------ |
 | `text` | Normal string. |
+| `password` | String must contain at least one numberic, one upper case, one lower case characters and the length at least 6 characters |
 | `fullname` | String should contain at least 2 words with 3 characters for each of the words and separated by space. It can contain more than one word.|
 | `username` | Like Instagram username. |
 | `word` | Alphabet characters. |
@@ -84,12 +87,13 @@ Here is the types of field.
 | `minLength` and `maxLength` | Minimum and Maximum length of the string types. |
 | `dateFormat` | String values of `mm/dd/yyyy`, `mm-dd-yyyy`, `dd/mm/yyyy`, `dd-mm-yyyy`, `yyyy/mm/dd` and `yyyy-mm-dd` |
 | `equal` | A field value and equal value to be equal. |
+| `notEqual` | A field value and equal value not to be equal. |
 
 
 
 ### Date example
 ```sh
-let {validoz, isValid} = require('validoz');
+let {validoz, isValid, isValidByName} = require('validoz');
 
 let field = {
     name: "Date",
@@ -99,16 +103,76 @@ let field = {
     startDate: '08/02/2020',
     endDate: '24/05/2020',
 };
+
 let result = validoz(field);
 console.log(result); // { field: 'Date', message: '' }
-console.log(isValid(result)); // true
+isValid(result); // true
+isValidByName(result, 'Date'); // true
 ```
 
-### Examples demo
-- [Demo 1](https://github.com/KamyarLajani/validoz/archive/)
-- [Demo 2]()
+### Other examples
+
+```sh
+let {validoz, isValid, isValidByName} = require('validoz');
+
+let field = [
+    {
+        name: "Full name",
+        type: "text",
+        value: 'Hello world',
+        minLength: 6
+    },
+    {
+        name: "Email address",
+        type: "email",
+        value: 'example@.com'
+    },
+    {
+        name: "Age",
+        type: "number",
+        value: 12,
+        min: 18,
+        max: 60,
+    },
+    {
+        name: "Best friend",
+        type: "text",
+        value: 'Doe',
+        equal: 'John' // value must be John
+    },
+    {
+        name: "Password",
+        type: "password", // you can also pass text if you don't want regex pattern to be conditioned
+        value: '123456',
+        minLength: 6,
+        maxLength: 30,
+    }
+]
+let result = validoz(field);
+console.log(result); 
+
+isValid(result); // false
+/*
+Returns: 
+[
+  { field: 'Full name', message: '' },
+  { field: 'Email address', message: 'Email address is invalid' },
+  { field: 'Age', message: 'Age must be between 18 and 60' },
+  { field: 'Best friend', message: 'Best friend value is wrong' },
+  {
+    field: 'Password',
+    message: 'Password must contain at least one numberic, one upper case, one lower case characters and the length at least 6 characters'
+  }
+]
+*/
+isValid(result); // false
+isValid(result[0]); // "Full name", true
+isValidByName(result, 'Full name'); // true
+isValidByName(result, 'Email address'); // false
+isValidByName(result, 'Password'); // false
 
 
+```
 ### Author
 Kamyar Lajani
 

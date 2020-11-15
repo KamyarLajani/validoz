@@ -1,4 +1,4 @@
-let {validoz, isValid} = require('../index.js');
+let {validoz, isValid, isValidByName} = require('validoz');
 
 let field = {
     name: "Date",
@@ -11,4 +11,5 @@ let field = {
 
 let result = validoz(field);
 console.log(result); // { field: 'Date', message: '' }
-console.log(isValid(result)); // true
+isValid(result); // true
+isValidByName(result, 'Date'); // true

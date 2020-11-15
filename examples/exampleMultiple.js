@@ -1,4 +1,4 @@
-let {validoz, isValid} = require('./validoz');
+let {validoz, isValid, isValidByName} = require('validoz');
 
 let field = [
     {
@@ -25,4 +25,7 @@ console.log(result);
     { field: 'Email address', message: '' },
     { field: 'Age', message: 'Age must be at least 18' }
 ] */
-console.log(isValid(result)); // false
+
+isValid(result); // false, not all the fields is valid
+isValidByName(result, 'Email address'); // true
+isValidByName(result, 'Full name'); // false

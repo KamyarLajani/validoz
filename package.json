@@ -1,0 +1,22 @@
+{
+  "name": "validoz",
+  "version": "1.0.0",
+  "description": "Validoz is both Client side and Server side form validator.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KamyarLajani/validoz.git"
+  },
+  "author": "Kamyar Lajani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KamyarLajani/validoz/issues"
+  },
+  "homepage": "https://github.com/KamyarLajani/validoz#readme"
+}

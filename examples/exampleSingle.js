@@ -1,4 +1,4 @@
-let {validoz, isValid} = require('./validoz');
+let {validoz, isValid, isValidByName} = require('validoz');
 
 let field = {
     name: "Full name",
@@ -7,4 +7,5 @@ let field = {
 };
 let result = validoz(field);
 console.log(result); // { field: 'Full name', message: '' }
-console.log(isValid(result)); // true
+isValid(result); // true
+isValidByName(result, 'Full name'); // true
