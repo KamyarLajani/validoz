@@ -65,7 +65,7 @@ Here is the types of field.
 
 | name | Description |
 | ------ | ------ |
-| `text` | Normal string. |
+| `text` | Any characters |
 | `password` | String must contain at least one numberic, one upper case, one lower case characters and the length at least 6 characters |
 | `fullname` | String should contain at least 2 words with 3 characters for each of the words and separated by space. It can contain more than one word.|
 | `username` | Like Instagram username. |
