@@ -11,7 +11,7 @@ $ npm install validoz
 
 ### Sample code
 
-```sh
+```js
 let {validoz, isValid} = require('validoz');
 let fields = [
     {
@@ -92,7 +92,7 @@ Here is the types of field.
 
 
 ### Date example
-```sh
+```js
 let {validoz, isValid, isValidByName} = require('validoz');
 
 let field = {
@@ -112,42 +112,10 @@ isValidByName(result, 'Date'); // true
 
 ### Other example
 
-```sh
+```js
 let {validoz, isValid, isValidByName} = require('validoz');
 
-let field = [
-    {
-        name: "Full name",
-        type: "text",
-        value: 'Hello world',
-        minLength: 6
-    },
-    {
-        name: "Email address",
-        type: "email",
-        value: 'example@.com'
-    },
-    {
-        name: "Age",
-        type: "number",
-        value: 12,
-        min: 18,
-        max: 60,
-    },
-    {
-        name: "Best friend",
-        type: "text",
-        value: 'Doe',
-        equal: 'John' // value must be John
-    },
-    {
-        name: "Password",
-        type: "password", // you can also pass text if you don't want regex pattern to be conditioned
-        value: '123456',
-        minLength: 6,
-        maxLength: 30,
-    }
-]
+let {field} = require('./form.js');
 let result = validoz(field);
 console.log(result); 
 
@@ -161,7 +129,7 @@ Returns:
   { field: 'Best friend', message: 'Best friend value is wrong' },
   {
     field: 'Password',
-    message: 'Password must contain at least one numberic, one upper case and one lower case characters and the length at least 6 characters'
+    message: 'Password must contain at least one numberic, one upper case, one lower case characters and the length at least 6 characters'
   }
 ]
 */
@@ -170,8 +138,6 @@ isValid(result[0]); // "Full name", true
 isValidByName(result, 'Full name'); // true
 isValidByName(result, 'Email address'); // false
 isValidByName(result, 'Password'); // false
-
-
 ```
 ### Author
 Kamyar Lajani

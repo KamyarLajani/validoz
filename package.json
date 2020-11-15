@@ -1,6 +1,6 @@
 {
   "name": "validoz",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Validoz is both Client side and Server side form validator.",
   "main": "index.js",
   "directories": {
@@ -17,7 +17,8 @@
     "validoz",
     "validation",
     "form-validation",
-    "validator"
+    "validator",
+    "svelte"
   ],
   "author": "Kamyar Lajani",
   "license": "MIT",

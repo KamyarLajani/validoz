@@ -308,12 +308,12 @@ const validate = (field)=>{
     }
     if(field.equal !== undefined){
         if(field.value !== field.equal){
-            error.push(`${field.name} value is wrong`);
+            error.push(`${field.name} is wrong`);
         }
     }
     if(field.notEqual !== undefined){
         if(field.value === field.notEqual){
-            error.push(`${field.name} value is wrong`);
+            error.push(`${field.name} is wrong`);
         }
     }
     if(error[0] === undefined){
